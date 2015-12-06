@@ -1,0 +1,1160 @@
+/* 
+Project Name: Rent Luxary Properties
+Client: Rent Luxary
+Author: Selome Welday
+*/
+
+/******************************************
+/* SETUP                   
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; 
+
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+  float: right;
+}
+
+.alignleft {
+  float: left;
+}
+/******************************************
+/* Bootstarp override                
+/*******************************************/
+
+.navbar-inverse {
+  background-image: none;
+  background-color: #fff;
+  border-color: #fff;  
+}
+.navbar {
+  margin-bottom: 0px;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #63020A;
+  text-decoration:underline;
+}
+.navbar-inverse .navbar-toggle {
+  background: #333;
+}
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
+  text-shadow: none; 
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #4E0707;
+  background-color: transparent;
+}
+/*********************s*********************
+/* BASE STYLES                   
+/*******************************************/
+
+body {
+  color: #000;
+  font-size: 14px;
+  line-height: 1.4;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight:300;
+  position:relative;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #210E00;
+}
+
+h2 {
+  font-family: 'karla';
+}
+h3 {
+  font-family: 'mongolian_baitiregular';
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+/******************************************
+/* LAYOUT                   
+/*******************************************/
+.container{
+  padding:0;
+}
+
+.experiment1{
+  color: #fff;
+  text-transform: uppercase;
+  width: 10%;
+  position: absolute;
+  top: 7%;
+  left: 1%;
+  font-weight: 600;
+  font-size: 8em;
+  line-height: 1em;
+}
+.advertisement{
+  font-family: lato, sans-serif;
+  background: black;
+  position: relative;
+  margin: 0 auto;
+  min-height: 658px;
+  background-image: url("../images/2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.advertisement .blackimage {
+  position: absolute;
+  opacity: 0.2;
+  width: 100%;  
+  min-height:658px;
+}
+.dropdownarrow{
+  width: 4%;
+}
+.advertisement .ad-description{
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1.2;
+  position: absolute;
+  margin-top: 510px;
+}
+.bottom-ad-description-wrapper {
+  position: absolute;
+  width: 100%;
+  top: 500px;
+  text-align: center;
+}
+.adventure{
+  color: white;
+}
+.tagline{
+  background: #383530;
+  color: #F1D408;
+  font-style: italic;
+}
+.blackbackground{
+  background:#000;
+}
+
+/* BRANDING LOGO*/
+.branding {
+  padding-bottom: 6px;
+  width: 100%;
+  z-index: 1;
+  left:0px;
+  top:0px;
+  background:white;
+}
+.logo p {
+  margin: 0px auto;
+  color: #F4F9F6;
+  font-size: 1.6em;
+}
+.rent{
+  font-family: helvetica;
+  text-transform: uppercase;
+  color: yellow;
+  font-weight: 600;
+  color: #A9A4A1;
+}
+.luxary{
+  font-family: sans-serif;
+  color: #4D4D56;
+}
+
+/*NAVIGATION*/
+.primary-navigation{
+  display: none;
+}
+
+/*ARTICLE RESORTS*/
+.resorts .resortimage{
+  width:100%;
+}
+.resorts{
+  position:relative;
+}
+.resorts:after {
+  position: absolute;
+  transition: all 1.5s ease;
+  display: block;
+  z-index: 0;
+  background: rgba(0,0,0,0);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  content: "";
+  margin-left: 20px;
+  width: 97%;
+  }
+.resorts.affix:before {
+  content: "International";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  color: white;
+  font-family: ratio modern;
+  font-size: 5em;
+  text-transform:uppercase;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+}
+.resorts.affix:after {  
+  background: rgba(0,0,0, .5);
+}
+
+.branding-wrapper {
+  position: relative;
+  min-height: 45px;
+}
+
+/*filter-section*/
+.filter-section{
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: -20px;
+}
+.filter-section .container {
+  background: #F3F3F3;
+  width: 25%;
+  margin-left: 16px;
+  border: 1px solid #BBB9B9;
+  padding: 10px;
+  margin-top: 20px;
+  -webkit-box-shadow: 2px 4px 10px -3px #D2D2D2;
+  -moz-box-shadow: 2px 4px 10px -3px #D2D2D2;
+  box-shadow: 2px 4px 10px -3px #D2D2D2;  
+}
+.cities-dropdown {
+  margin-top: 15px;
+}
+.form-select {
+  display: inline-block;
+  width: 100%;
+}
+
+select {
+  padding: 7px;
+  height: 30px;
+  line-height: 30px;
+  background: #FFFFFF;
+  font-size: 14px;
+  border-radius: 0px;
+  border: 1px solid #DFDFDF;
+}
+input[type="text"] {
+  display: inline-block;
+  width: 100%;
+  height: 34px;
+}
+.check-out-date{
+  margin-top: 5px;
+}
+.date{
+  margin-top: 5px;
+}
+.guests {
+  margin-top: 5px;
+}
+.children {
+  padding-bottom: 20px;
+  margin-top: 5px;
+}
+.search input[type="submit"] {
+  float: right;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/*About Section*/
+.about-section .container {
+  float: right;
+  width: 50%;
+  margin-right: 280px;
+  margin-top: -280px;
+}
+.about-section h2 {
+  color: white;
+  background: #bbb2a4;
+  font-size: 20px;
+  padding: 6px;
+  font-weight: 600;
+}
+.about-section p {
+  margin: 10px;
+  color: #947D59;
+  font-weight: 600;
+  font-style: oblique;
+}
+.about-section ul {
+  margin: 20px 40px;
+  list-style: disc;
+  color: #6B4C36;
+  font-family: 'karla';
+  text-decoration: underline;
+}
+.testimonial {
+  background: #bbb2a4;
+  font-style: italic;
+  color: white;
+  padding: 0 20px;
+}
+
+/*Subscription*/
+#subscription {
+  margin-bottom: 20px;
+  padding-top: 20px;
+  position:relative;
+}
+.subscription.affix {
+  transform: translateY(0);
+}
+.subscription {
+  width: 100%;
+  z-index: 1;
+  left: 0px;
+  bottom: 0;
+  background: white;
+  transition: all 2.5s ease;
+  opacity: 1;
+  transform: translateY(100%);
+}
+
+.carousel-inner img {
+  width:100%;
+}
+.search {
+  width: 100%;
+}
+.cities-section {
+  font-size: 24px;
+  float: left;
+}
+.cities-section h2 {
+  text-transform: uppercase;
+  font-weight: 800;
+  margin: 14px 10px;
+  font-size: 36px;
+  color: #63020A;
+  border-bottom: 6px solid;
+  padding: 0;
+}
+.cities-section img {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.cities-section h3 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  text-decoration: underline;
+}
+.cities-section p {
+  font-size: .5em;
+  font-family: helvetica;
+  line-height: 1.5em;
+}
+.readmore, .readless {
+  text-align: right;
+  margin-top: 10px;
+}
+.otherservices .jetinterior img{
+  width: 32%;
+  float: left;
+  margin-right: 2%;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.otherservices .lifestyle img{
+  width: 32%;
+  float: left;
+  margin-right: 2%;
+  margin-top: 10px;
+}
+.otherservices .jetexterior img{
+  width: 32%;
+  float: left;
+  margin-top: 10px;
+}
+.footer-wrapper {
+  text-align: center;
+}
+.footer-wrapper .logo {
+  color: #f9e42e;
+}
+.footer-wrapper ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 26px 75px;
+}
+.footer-wrapper p {
+  font-size: .69em;
+  color: #fff;
+  font-weight: 600;
+}
+.one-edge-shadow {
+  -webkit-box-shadow: 0 8px 24px -18px #797979;
+  -moz-box-shadow: 0 8px 24px -18px #797979;
+  box-shadow: 0 8px 24px -18px #797979;
+}
+/*Image hover effects*/
+
+.hovereffect {
+  display: none;
+}
+.hovereffect .item {
+  text-align:center;
+  float:none;
+  margin:5px;
+  position:relative;      
+}
+.hovereffect img {
+  width: 390px;
+}
+.hovereffect .item,
+.hovereffect .item-hover,
+.hovereffect .item-hover .mask,
+.hovereffect .item-img,
+.hovereffect .item-info {
+  width: 390px;
+  height: 225px;  
+  margin: 0 auto;  
+}
+.hovereffect .item-hover,
+.hovereffect .item-hover .mask,
+.hovereffect .item-img { 
+  position:absolute;
+  top:0;
+  left:0;     
+}     
+.hovereffect .item-type-line .item-hover { 
+  z-index:100;  
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  transition: all 300ms ease-out; 
+  opacity:0;
+  cursor:pointer;           
+  display:block;
+  text-decoration:none;
+  text-align:center;
+}
+.hovereffect .item-type-line .item-info {
+  z-index:10;
+  color:#ffffff;
+  display:table-cell;
+  vertical-align:middle;
+  position:relative;
+  z-index:5;                  
+}
+.hovereffect .item-type-line .item-info .headline {
+  font-size:20px;         
+}
+.hovereffect .item-type-line .item-info .line {
+  height:1px;
+  width:0%;
+  margin:15px auto;
+  background-color:#ffffff;
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;          
+}
+.hovereffect .item-type-line .item-info .date {
+  font-size:12px;
+}
+.hovereffect .item-type-line .item-hover .mask {
+  background-color:#000;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);                    
+  opacity:0.5;
+  z-index:0;
+}
+.hovereffect .item-type-line .item-hover:hover .line {
+  width:40%;
+}
+.hovereffect .item-type-line .item-hover:hover {
+  opacity:1;
+}       
+.hovereffect .item-img {     
+  background-color:#7a548f;
+  z-index:0;      
+}
+/******************************************
+/* ADDITIONAL STYLES                   
+/*******************************************/
+
+/*Only Mobile*/
+@media screen and (max-width:768px){ 
+  /*Hamburger Icon*/
+  #hamburger {
+    width: 60px;
+    cursor: pointer;
+    border-radius: 4px;
+    float: right;
+    display:block;
+  }
+  #hamburger span {
+    position: absolute;
+    opacity: 1;
+    left: 85%;
+    margin-top: 235px;
+    height: 4px;
+    width: 8%;
+    background: #6B0C09;
+  }
+  #hamburger span:nth-child(1) {
+    top: 0px;
+  }
+  #hamburger span:nth-child(2) {
+    top: 8px;
+  }
+  #hamburger span:nth-child(3) {
+    top: 16px;
+  }
+  .container {
+    padding: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .resorts .container{
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .advertisement .ad-description {
+    display:none;
+  }
+  .resorts .resortimage{
+  width:100%;
+  }
+  .resorts{
+    position:relative;
+  }
+  .resorts:after {
+    display:none;
+  }
+  .resorts.affix:before {
+    display:none;
+  }
+
+  .navbar-inverse .navbar-nav > li > a:hover,
+  .navbar-inverse .navbar-nav > li > a:focus {
+  color: yellow;
+  }
+  .cities-section h2 {
+    margin: 14px 0;
+    font-size: 1.2em;
+  }
+  .resortheader{
+    position: absolute;
+    top: 0;
+    margin-top: 52%;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #652F2F;
+    font-size: 2em;
+    font-family: mongolioan;
+    text-align: center;
+    width: 100%;
+  }
+  .resorts p{
+    letter-spacing: .3em;
+    margin-top: 52px;
+    font-family: open-sans;
+    color: #A5A5A5;
+    text-align: center;
+    width: 100%;
+    font-size: .8em;
+  }
+  .filter-section .container {
+    width: 100%;
+    margin-left: 0px; 
+    border: none;
+  }
+  .filter-section {
+    background: white;
+    margin: 50px 0;
+  }
+  .about-section .container{
+    display:none;
+  }
+  .dropdownarrow2{
+    width: 5%;
+    margin-left: 47.5%;
+    opacity: 0.2; 
+  }
+  .booknow{
+    text-align: center;
+    font-size: .8em;
+    font-weight: 600;
+  }
+  .booknow a{
+    color:black;
+  }
+
+  .subscription {
+    display:none;
+  }
+  .navbar-inverse {
+    background-color: #3A0000;
+    border-color: #3A0000;
+  }
+  .navbar-inverse .navbar-toggle {
+    background: #fff;
+  }
+  .navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #333;
+  }
+  .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: #FFF;
+  }
+  .noshow{
+    display:none;
+  }
+  .branding {
+    background: #3A0000;
+    border-bottom: solid 1px #565353;
+  }
+  .navbar-brand{
+    position:absolute;
+  }
+  .rent {
+    color: #E5F131;
+  }
+  .luxary {
+    color: #F9F7F7;
+  }
+  .carouseldescription {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 40px;
+  }
+  .carouselheader {
+    font-family: ratiomodern;
+    font-weight: 900;
+    font-size: 1.7em;
+    text-transform: uppercase;
+    color: #63020A;
+    padding-top: 20px;
+    text-decoration: underline;
+  }
+  .carouselparagraph {
+    line-height: 1.5;
+    font-family: helvetica;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .carouseldescription .search input[type="submit"] {
+    margin-right: 0; 
+    float:none;
+    margin-left:304px;
+  }
+  .properties{
+    font-family: ratiomodern;
+    color: #63020A;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-decoration: overline;
+    border-left: black solid;
+    border-right: black solid;
+    border-top: black solid;
+  }
+  .carousel .dubai{
+    border-bottom:solid black;
+  }
+  .footer-wrapper .logo {
+    margin-bottom: 0;
+    font-size: .77em;
+  }
+  .footer-wrapper ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 6px 5px;
+  }
+  .twitter-img{
+    width: 22px;
+    height: auto;
+  }
+  .facebook-img{
+    width: 8px;
+    height: auto;
+  }
+  .footer-wrapper p {
+    font-size: .46em;
+    color: gray;
+    margin:0;
+  }  
+  .carouseldescription .search input[type="submit"] {
+    margin-right: 20px;
+    float: right;
+  }
+  .search input[type="submit"] {
+    float: none;
+    margin-left: 0;
+    background: #730000;
+    border: 0px solid #DCDCDC;
+    border-radius: 2px;
+    font-family: inherit;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: none;
+  }
+.search input[type="submit"] {
+    float: right;
+    display: inline-block;
+    margin-bottom: 20px;
+  } 
+    .bottom-ad-description-wrapper {
+    position: absolute;
+    width: 100%;
+    top: 500px;
+    text-align: center;
+    color: black;
+    font-size: 1.4em;
+    margin-top: 13%;
+    /* background: white; */
+    color: #FFFFFF;
+    font-weight: 600;
+  }
+  .adventure {
+    color: #FFF700;
+  } 
+}
+/*Tablet and above*/
+@media screen and (min-width:768px){
+  /*Bootstrap override*/
+  .navbar-inverse .navbar-nav > li > a {
+    color: #424242;
+  }  
+  .container{
+    margin:0 auto;
+    padding:0 16px;
+    width:100%;
+  }
+  .experiment1{
+    font-weight: 900;
+    font-size: 10em;
+    line-height: .9;
+  }
+  .advertisement p{
+    font-size: 1.2em;
+    font-weight: 900;
+    left: 35%;
+  }
+  .advertisement .ad-description {
+    font-size: 2.4em;
+  }
+  .advertisement .bottom-ad-description-wrapper .first {
+    font-size:1.4em;
+    font-weight: 600;
+    color: #FFE894;
+  }
+  .advertisement .ad-description.second {
+    margin-top: 300px;
+    text-align: right;
+    line-height: normal;
+    font-weight: 600;
+    width: 330px;
+    right: 14px;
+  }
+  .adventure {
+    color: black;
+    background-color: white;
+  }
+  .branding{
+    padding:0;
+  }
+  .branding nav ul li {
+    display: inline-block;
+    font-size: 1em;
+    margin: 0 0 0 0px;
+    padding-left: 15px;
+  }
+  .branding nav ul li a {
+    color: #858585;
+    font-weight: 600;
+  }
+  #hamburger {
+    display: none;
+  }
+  .logo-wrapper {
+    padding: 0;
+  }
+  .cities-section h2 {
+    text-decoration: underline;
+    border-bottom: none;
+    padding-top: 60px;
+  }
+  .listing1-newyork {
+    width: 32%;
+    float: left;
+    margin-right: 2%;
+    margin-top: 2%;
+  }
+  .cities-container {
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .cities-section h3 {
+    margin-bottom: 0;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .listing2-greece {
+    width: 32%;
+    float: left;
+    margin-right: 2%;
+    margin-top: 2%;
+  }
+  .listing3-dubai {
+    width: 32%;
+    float: left;
+    margin-top: 2%;
+  }
+  .navbar-right {
+    float: left !important;
+    width: 67%;    
+  }
+  .navbar-right ul{
+    width: 73%;
+    display: inline-block;    
+  }
+  .email{
+    display: inline-block;
+  }
+  .email input[type="text"] {
+    display: inline-block;
+    height: 25px;
+  }
+  .emailsearch{
+    display: inline-block;
+  }
+  .emailsearch input[type="submit"] {
+    margin-left: 0;
+    background: #E0DFDF;
+    border: 0px solid #DCDCDC;
+    border-radius: 2px;
+    font-family: inherit;
+    font-weight: 600;
+    color: #424242;
+    text-shadow: none;
+    margin-top: 14px;
+}
+  .search-form-wrapper {
+    width: 34%;
+    display: inline-block;
+    margin-top: 10px;
+    right: 0;
+    text-align: right;
+  }   
+  .search-form-wrapper input {
+    height: 33px;
+    margin-right: -5px;    
+  }
+  .noshowbranding{
+    display:none;
+  }
+  .logoimage{
+    width:2%;
+    position: absolute;
+    top: 40%;
+    margin-left: 5%;
+  }
+  .subscription ul li{
+    display: inline-block;
+    margin: 0 0 0 40px;
+    font-size: .8em;
+    font-style:italic;
+    text-align:center;
+  }
+  .subscription ul{
+    margin-left: 6%;
+  }
+  .allcaps{
+    font-family: ratiomodern;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    font-style: normal;
+    display: block;
+    font-weight: 600;
+    color: gray;
+  }
+  .filter-section .container {
+    background: #FFFFFF;
+    margin-left: 0;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+}
+  .filter-section ul li{
+    float: left;
+    margin-right: 10px;
+    width: 124px;
+  }
+  .search li{
+    width: 80px;
+  }
+  .cities-dropdown {
+      margin-top: 0;
+  }
+  .check-out-date {
+    margin-top: 0;
+  }
+  .guests {
+    margin-top: 0;
+  }
+  .children {
+      padding-bottom: 0;
+      margin-top: 0;
+  }
+  .search input[type="submit"] {
+    float: none;
+    margin-left: 0;
+    background: #730000;
+    border: 0px solid #DCDCDC;
+    border-radius: 2px;
+    font-family: inherit;
+    font-weight: 700;
+    padding: 10px 15px;
+    color: #fff;
+    text-shadow: none;
+  }
+  .properties {
+    font-family: ratiomodern;
+    color: #63020A;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 50px;
+  }
+  .otherservices{
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .otherservices .container{
+    background-color:black;
+  }
+  .carouseldescription {
+    /* width: 20em; */
+    /* background: #FFFEFE; */
+    /* position: absolute; */
+    /* top: 5%; */
+    /* left: 66%; */
+    -webkit-box-shadow: 0px 8px 15px -6px #444444;
+    -moz-box-shadow: 8px 8px 15px -6px #444444;
+    /* box-shadow: 8px 8px 15px -6px #444444; */
+  }
+  .carouselheader {
+    font-family: ratiomodern;
+    font-weight: 900;
+    font-size: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    color: #63020A;
+    text-align: center;
+    padding-top: 20px;
+    text-decoration: underline;
+  }
+  .carouselparagraph{
+    font-size: 1.2em;
+    line-height: 1.2;
+    font-family: times;
+    color: gray;
+    padding: 20px 0px;
+  }
+  .carouseldescription .search input[type="submit"] {
+    margin-right: 20px;
+    float: right;
+  }
+  .footer-wrapper{
+    position: relative;
+    padding: 10px 0 20px;
+    margin-bottom:7%;
+  }
+
+  .footer-wrapper .logo {
+    margin-bottom: 10px;
+    font-size: 1.08em;
+    margin-left: 0;
+  }
+  .footer-wrapper ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 6px 5px;
+  }
+  .twitter-img{
+    width: 32px;
+    height: auto;
+  }
+  .facebook-img{
+    width: 12px;
+    height: auto;
+  }
+  .footer-wrapper p {
+    color: gray;
+    font-size: .69em;
+    padding: 10px;
+    background: black;
+  }
+  /*Image hover Effect*/ 
+  /*Hover Effect*/
+  .hovereffect {
+    height: 300px; 
+  }
+  .hovereffect .item {
+    text-align:center;
+    float:left;
+    margin:5px;
+    position:relative;      
+  }
+  .hovereffect img {
+    width: 390px;
+  }
+  .hovereffect .item,
+  .hovereffect .item-hover,
+  .hovereffect .item-hover .mask,
+  .hovereffect .item-img,
+  .hovereffect .item-info {
+  } 
+  #dubaicarousel{
+    background: #212121;
+    padding-bottom: 20px;
+  } 
+  #myCarousel {
+    background: white;
+  }
+  .mycarousel{
+    margin-top:60px;
+  }
+  input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
+
+/*Desktop*/
+@media screen and (min-width: 960px){
+  .branding nav ul li {
+    margin: 0 0 0 70px;
+    padding-left: 0;
+  }
+  .search-form-wrapper {
+    width: 27%;   
+  }  
+  .navbar-right {
+    width: 74%;
+  }   
+  .filter-section ul li{
+    width: 218px;
+  } 
+  .filter-section .search1{
+    width: 6%;
+  } 
+  .subscription ul li{
+    width: 150px;
+  }
+  .subscription ul{
+    margin-left: 10%;
+  } 
+  .cities-section {
+    background: #212121;
+    float: left;
+    color: white;
+  } 
+  .cities-section h2 {
+    color:white;
+  }
+  .carouseldescription {
+    width: 20em;
+    background: #FFFEFE;
+    position: absolute;
+    top: 5%;
+    left: 66%;
+    -webkit-box-shadow: 8px 8px 15px -6px #444444;
+    -moz-box-shadow: 8px 8px 15px -6px #444444;
+    box-shadow: 8px 8px 15px -6px #444444;
+  }  
+  #myCarousel{
+    background: #212121;
+    padding-bottom: 20px;
+    padding-top:60px;
+  }  
+  .carouselparagraph {
+    font-size: 1.4em;
+    padding: 20px 30px;
+  }
+  .listing1-newyork {
+    width: 32%;
+    float: left;
+    margin: 2% 1% 10% 1%;
+  }
+  .listing2-greece {
+    width: 32%;
+    float: left;
+    margin: 2% 1% 10% 0;
+  }
+  .listing3-dubai {
+    width: 32%;
+    float: left;
+    margin: 2% 1% 10% 0;
+  }
+  .footer-wrapper {
+    background: black;
+  }
+  .filter-section .container{
+    background: #212121;
+  }
+  .properties{
+    font-family: ratiomodern;
+    color: #B9B9B9;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 50px;
+  }
+  /*Hover Effect*/
+  .hovereffect {
+    display: block;
+    margin-left: 15px;
+  }  
+
+}
